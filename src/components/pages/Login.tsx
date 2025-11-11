@@ -23,24 +23,29 @@ const Login = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !password) {
-      enqueueSnackbar("Por favor completa todos los campos", { variant: "warning" });
+      enqueueSnackbar("Por favor completa todos los campos", {
+        variant: "warning",
+      });
       return;
     }
 
     const userRole = email === "admin@empresa.com" ? "admin" : "miembro";
     localStorage.setItem("userEmail", email);
     localStorage.setItem("userRole", userRole);
-    
-    enqueueSnackbar(`¡Bienvenido! Sesión iniciada como ${userRole}`, { variant: "success" });
+
+    enqueueSnackbar(`¡Bienvenido! Sesión iniciada como ${userRole}`, {
+      variant: "success",
+    });
     navigate("/home");
   };
 
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        minHeight: "100dvh",
+        minWidth: "100dvw",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
