@@ -4,6 +4,7 @@ import { SnackbarProvider } from "notistack";
 import Login from "./components/pages/Login";
 import Home from "./components/pages/Home";
 import Members from "./components/pages/Members";
+import Statistics from "./components/pages/Statistics";
 import NotFound from "./components/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ const App = () => (
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/members" element={<Members />} />
+            <Route path="/statistics" element={<Statistics />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
